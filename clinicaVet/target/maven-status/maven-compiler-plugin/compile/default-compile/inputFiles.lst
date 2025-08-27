@@ -1,0 +1,12 @@
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\ClinicaVetApplication.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\controller\OwnerController.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\controller\PetController.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\dto\PetOwnerDTO.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\model\Owner.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\model\Pet.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\repository\IOwnerRepository.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\repository\IPetRepository.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\service\IOwnerService.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\service\IPetService.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\service\OwnerService.java
+C:\Users\fiore\spring boot projects\clinicaVet\clinicaVet\src\main\java\com\ejer2\clinicaVet\service\PetService.java

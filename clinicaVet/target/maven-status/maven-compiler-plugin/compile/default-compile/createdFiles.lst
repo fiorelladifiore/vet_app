@@ -1,0 +1,12 @@
+com\ejer2\clinicaVet\model\Pet.class
+com\ejer2\clinicaVet\service\PetService.class
+com\ejer2\clinicaVet\controller\OwnerController.class
+com\ejer2\clinicaVet\model\Owner.class
+com\ejer2\clinicaVet\repository\IOwnerRepository.class
+com\ejer2\clinicaVet\dto\PetOwnerDTO.class
+com\ejer2\clinicaVet\repository\IPetRepository.class
+com\ejer2\clinicaVet\service\OwnerService.class
+com\ejer2\clinicaVet\service\IPetService.class
+com\ejer2\clinicaVet\controller\PetController.class
+com\ejer2\clinicaVet\ClinicaVetApplication.class
+com\ejer2\clinicaVet\service\IOwnerService.class
