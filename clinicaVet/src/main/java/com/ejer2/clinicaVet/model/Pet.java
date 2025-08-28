@@ -9,7 +9,7 @@ import lombok.Setter;
 public class Pet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_pet;
     private String name;
     private String species;

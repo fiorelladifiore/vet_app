@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Owner {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_owner;
     private String dni;
     private String name;
