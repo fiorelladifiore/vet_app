@@ -14,6 +14,7 @@ Permite administrar dueños de mascotas (**Owner**) y mascotas (**Pet**) con ope
 - **MySQL** (base de datos relacional)
 - **Docker & Docker Compose** (para contenerización y despliegue)
 - **Postman** (para pruebas de los endpoints REST)
+- **XAMPP** (para pruebas locales con Postman y administrar base de datos desde phpMyAdmin)
 
 ---
 
@@ -28,6 +29,7 @@ El proyecto sigue una **arquitectura multicapa**:
 
 - **DTO (`dto/`)**  
   Objeto de transferencia de datos para estructurar las respuestas.
+  Devuelve en formato plano un conjunto de datos.
 
 - **Repository (`repository/`)**  
   Interfaces que extienden de JPA Repository para interactuar con la base de datos:
@@ -51,18 +53,22 @@ El proyecto sigue una **arquitectura multicapa**:
 - **Owner**
   - Crear un dueño
   - Obtener lista de dueños
+  - Obtener un dueño por ID
   - Editar un dueño existente
   - Eliminar un dueño
 
 - **Pet**
   - Crear una mascota
   - Obtener lista de mascotas
+  - Obtener una mascota por ID
+  - Obtener los datos en formato plano de una mascota y su dueño (DTO)
+  - Buscar mascotas en base a su especie (dog, cat, etc)
   - Editar datos de una mascota
   - Eliminar una mascota
 
 ---
 
-## 🔧 Configuración y ejecución
+## 🔧 Configuración y ejecución con repositorio
 
 ```bash
 
@@ -73,48 +79,54 @@ cd vet_app/clinicaVet
 
 2. Configuración de base de datos
 
-En application.properties (o variables de entorno en Docker), configurar los datos de conexión a MySQL:
+En application.properties configurar los datos de conexión a MySQL o usando variables de entorno:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/veterinaria?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://localhost:3306/veterinaria?useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true
 spring.datasource.username=admin
 spring.datasource.password=admin
 spring.jpa.hibernate.ddl-auto=update
+
 
 3. Construir y ejecutar con Maven
 mvn clean install
 mvn spring-boot:run
 
 4. Ejecutar con Docker
-docker-compose up --build
+-docker-compose build
+-docker-compose up
+
+4.1 O, sin ejecutar en Docker, usar un proveedor de servidor web + administrador de base de datos (Por ejemplo Xampp)
 
 📮 Endpoints principales
+Los endpoints fueron probados con Postman. Se recomienda ejecutar manualmente las peticiones a las rutas listadas abajo.
+
 Owner
 
 GET /owners → Listar todos los dueños
 
-GET /owner → Obtener un dueño por ID
+GET /owner/{id} → Obtener un dueño por ID
 
 POST /owner/save → Crear un nuevo dueño
 
-PUT /owner/edit → Editar un dueño existente
+PUT /owner/edit/{id} → Editar un dueño existente
 
-DELETE /owner/delete → Eliminar un dueño
+DELETE /owner/delete{id} → Eliminar un dueño
 
 Pet
 
 GET /pets → Listar todas las mascotas
 
-GET /pet → Obtener una mascota por ID
+GET /pet/{id} → Obtener una mascota por ID
 
 POST /pet/save → Crear una nueva mascota
 
-PUT /pet/edit → Editar una mascota existente
+PUT /pet/edit/{id} → Editar una mascota existente
 
-DELETE /pet/delete → Eliminar una mascota
+DELETE /pet/delete/{id} → Eliminar una mascota
 
-🛠 Pruebas con Postman
+GET /getInfo/{id} → Obtener los datos en formato plano de una mascota y su dueño (DTO)
 
-Los endpoints fueron probados con Postman. Se recomienda importar la colección de pruebas (si está disponible) o ejecutar manualmente las peticiones a las rutas listadas arriba.
+GET /pet/getSpecies/{species} → Buscar mascotas en base a su especie (dog, cat, etc)
 
 📌 Futuras mejoras
 
