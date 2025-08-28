@@ -97,36 +97,66 @@ mvn spring-boot:run
 
 4.1 O, sin ejecutar en Docker, usar un proveedor de servidor web + administrador de base de datos (Por ejemplo Xampp)
 
+```
+
 📮 Endpoints principales
 Los endpoints fueron probados con Postman. Se recomienda ejecutar manualmente las peticiones a las rutas listadas abajo.
 
 Owner
-
+---
 GET /owners → Listar todos los dueños
 
+<img width="1370" height="713" alt="Captura de pantalla 2025-08-28 085620" src="https://github.com/user-attachments/assets/bd8009c1-5b26-49c8-8a43-21067028d480" />
+
+---
 GET /owner/{id} → Obtener un dueño por ID
 
+<img width="1366" height="544" alt="Captura de pantalla 2025-08-28 085856" src="https://github.com/user-attachments/assets/1f67e61d-9ba7-45e4-9658-ef124e9030c3" />
+
+---
 POST /owner/save → Crear un nuevo dueño
+<img width="1377" height="587" alt="Captura de pantalla 2025-08-28 085212" src="https://github.com/user-attachments/assets/988e814e-1f38-4185-afd0-d3639ca83a21" />
 
+---
 PUT /owner/edit/{id} → Editar un dueño existente
+<img width="1385" height="694" alt="Captura de pantalla 2025-08-28 085952" src="https://github.com/user-attachments/assets/6e69fef4-b0d5-4b27-bfc0-d0228a772b5f" />
 
+---
 DELETE /owner/delete{id} → Eliminar un dueño
+<img width="1363" height="509" alt="Captura de pantalla 2025-08-28 090038" src="https://github.com/user-attachments/assets/84a1c2b7-ec8c-40a6-adb6-e9c3d558fadc" />
 
+---
 Pet
+---
 
 GET /pets → Listar todas las mascotas
+<img width="1360" height="813" alt="Captura de pantalla 2025-08-28 090649" src="https://github.com/user-attachments/assets/25e51909-3dff-42b0-bdc1-d0b3eec780f8" />
 
+---
 GET /pet/{id} → Obtener una mascota por ID
+<img width="1360" height="723" alt="Captura de pantalla 2025-08-28 091042" src="https://github.com/user-attachments/assets/7cbc66dc-6fde-4133-b14a-a2ecede7286e" />
 
+---
 POST /pet/save → Crear una nueva mascota
+<img width="1371" height="561" alt="Captura de pantalla 2025-08-28 090509" src="https://github.com/user-attachments/assets/b533c442-c743-4b6a-8301-011dd022427d" />
 
+---
 PUT /pet/edit/{id} → Editar una mascota existente
+<img width="1371" height="831" alt="Captura de pantalla 2025-08-28 090924" src="https://github.com/user-attachments/assets/1990a55f-118c-4e9e-90fb-8f498496f8cd" />
 
+---
 DELETE /pet/delete/{id} → Eliminar una mascota
+<img width="1370" height="449" alt="Captura de pantalla 2025-08-28 091141" src="https://github.com/user-attachments/assets/b2de799c-8a93-48d2-8170-e7a28d3b6c56" />
 
+---
 GET /getInfo/{id} → Obtener los datos en formato plano de una mascota y su dueño (DTO)
+<img width="1362" height="596" alt="Captura de pantalla 2025-08-28 091253" src="https://github.com/user-attachments/assets/341d3763-14df-4716-8799-65c1d4d25e41" />
 
+---
 GET /pet/getSpecies/{species} → Buscar mascotas en base a su especie (dog, cat, etc)
+<img width="1357" height="795" alt="Captura de pantalla 2025-08-28 091324" src="https://github.com/user-attachments/assets/4e3affda-ed41-4a01-b9de-b16349671eda" />
+
+---
 
 📌 Futuras mejoras
 
